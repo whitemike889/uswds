@@ -19,8 +19,9 @@
       {% set nav_id = nav.id_prefix ~ link.id %}
 
       <button
-        class="usa-accordion__button usa-nav__link{% if link.is_current %} usa-current{% endif %}"
-        aria-expanded="false"
+        class="usa-accordion__button usa-nav__link
+        {% if link.is_current %} usa-current{% endif %}"
+        aria-expanded="{{ true if link.is_current else false }}"
         aria-controls="{{ nav_id }}">
         <span>{{ link.text }}</span>
       </button>
