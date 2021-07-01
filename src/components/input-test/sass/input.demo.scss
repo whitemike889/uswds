@@ -1,0 +1,81 @@
+/*
+This file is here just for the Input demo.
+You shouldn't place your styles here in `/stories`.
+*/
+
+.input {
+  font-size: 110%;
+  color: #7b859a;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input-field {
+  display: block;
+  background-color: white;
+  border: 2px solid;
+  border-radius: 4px;
+  font-family: inherit;
+  width: 100%;
+  outline: 0;
+  border-color: #a6aebe;
+  padding: 0.4em 0.6em;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  font-size: 2.75em;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #7b859a;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #7b859a;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #7b859a;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: #7b859a;
+  }
+}
+
+.input-field:focus:not(:disabled):not([aria-invalid]) {
+  box-shadow: inset 0 0 0 0.03em #a6aebe;
+}
+
+.input-has-error .input-field {
+  border-color: #ff4785;
+}
+
+.input-field[aria-invalid] {
+  border-left-width: 0.15em;
+}
+
+.input-is-disabled .input-field {
+  color: inherit;
+  border-color: #eee;
+  cursor: not-allowed;
+}
+
+.input-label {
+  font-weight: bold;
+}
+
+.input-required {
+  color: #ff4785;
+}
+
+.input-error-message {
+  font-size: 85%;
+  margin-top: 0.75em;
+  color: #ff4785;
+}
