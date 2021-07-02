@@ -20,6 +20,13 @@ module.exports = ({ config, mode }) => {
       { loader: "style-loader", options: { injectType: "styleTag" } },
       { loader: "css-loader" },
       { loader: "sass-loader" },
+      {
+        loader: "postcss-loader",
+        options: {
+          // Enable Source Maps
+          sourceMap: true,
+        },
+      },
     ],
     include: path.resolve(__dirname, "../"),
   });

@@ -107,6 +107,7 @@
     "@storybook/addon-actions": "^6.3.2",
     "@storybook/addon-essentials": "^6.3.2",
     "@storybook/addon-links": "^6.3.2",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/html": "^6.3.2",
     "@types/node": "^14.17.3",
     "ansi-colors": "^4.1.1",
