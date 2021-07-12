@@ -20,7 +20,6 @@ module.exports = ({ config, mode }) => {
       use: [
         { loader: "style-loader", options: { injectType: "styleTag" } },
         { loader: "css-loader" },
-        { loader: "sass-loader" },
         {
           loader: "postcss-loader",
           options: {
@@ -28,14 +27,13 @@ module.exports = ({ config, mode }) => {
             sourceMap: true,
           },
         },
+        { loader: "sass-loader" },
       ],
       include: path.resolve(__dirname, "../"),
     },
     {
-      test: /\.(png|svg|jpg|jpeg)$/,
-      use: [
-        'file-loader',
-      ],
+      test: /\.(png|svg|jpe?g)$/i,
+      loader: "file-loader"
     }
   );
 
