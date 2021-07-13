@@ -58,7 +58,7 @@
     "watch": "NODE_ENV=development nswatch",
     "prettier:scss": "npx prettier --write ./src/stylesheets/**/*.scss",
     "prettier:templates": "npx prettier --write './build/components/render/*.html'",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./src",
     "build-storybook": "build-storybook"
   },
   "watch": {
@@ -170,6 +170,7 @@
     "twig": "^1.15.4",
     "twigjs-loader": "^1.0.2",
     "typescript": "^4.3.2",
+    "url-loader": "^4.1.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "yargs": "^16.1.1"

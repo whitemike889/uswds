@@ -10,31 +10,20 @@ module.exports = ({ config, mode }) => {
   // Tell Storybook where your components live
   config.resolve.alias["components"] = path.resolve(
     __dirname,
-    "../src/"
+    "src/components"
   );
 
   // Add scss support
   config.module.rules.push(
     {
       test: /\.scss$/,
-      use: [
-        { loader: "style-loader", options: { injectType: "styleTag" } },
-        { loader: "css-loader" },
-        {
-          loader: "postcss-loader",
-          options: {
-            // Enable Source Maps
-            sourceMap: true,
-          },
-        },
-        { loader: "sass-loader" },
-      ],
-      include: path.resolve(__dirname, "../"),
+      use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
     },
     {
-      test: /\.(png|svg|jpe?g)$/i,
-      loader: "file-loader"
-    }
+      test: /.(jpe?g|png|svg)$/,
+      loader: "url-loader",
+      include: path.join(__dirname, "src/img")
+    },
   );
 
   return config;
