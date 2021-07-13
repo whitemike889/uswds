@@ -40,7 +40,7 @@
     "build:js": "gulp javascript",
     "cover": "nyc --reporter=lcov --config config/nycrc.yml gulp cover",
     "format-tokens": "node ./src/utils/style-format.js --file './src/data/colors' --output './src/stylesheets/core/system-tokens'",
-    "federalist": "npm install && gulp build && fractal build",
+    "federalist": "npm install && build-storybook -s src",
     "lint": "eslint src/js/**/*.js spec/**/*.js",
     "mocha": "mocha",
     "prepare": "gulp build",
@@ -59,7 +59,7 @@
     "prettier:scss": "npx prettier --write ./src/stylesheets/**/*.scss",
     "prettier:templates": "npx prettier --write './build/components/render/*.html'",
     "storybook": "start-storybook -p 6006 -s ./src",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s src"
   },
   "watch": {
     "src/stylesheets/**/*.scss": "build:css",
