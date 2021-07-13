@@ -1,11 +1,7 @@
-import component from "./templates/banner.twig";
-import "../../stylesheets/uswds.scss";
-import flagImg from "../../img/us_flag_small.png";
-import dotGovImg from "../../img/icon-dot-gov.svg";
+import "../../stylesheets/uswds.scss"
+import component from "./templates/banner.twig"
 
 const defaults = {
-  flagImg,
-  dotGovImg,
   banner: {
     id: "gov-banner-default",
     text: "An official website of the United States government",
@@ -23,7 +19,6 @@ const defaults = {
   }
 }
 
-
 export default {
   title: "Components/Banner",
   argTypes: {
@@ -40,3 +35,60 @@ const Template = (...args) => component(...args);
 
 export const Default = Template.bind({});
 Default.args = defaults;
+
+export const DefaultSpanish = Template.bind({});
+DefaultSpanish.args = {
+  banner: {
+    id: "gov-banner-default-lang-es",
+    text: "Un sitio oficial del Gobierno de Estados Unidos",
+    action: "Así es como usted puede verificarlo",
+    aria_label: "Un sitio oficial del Gobierno de Estados Unidos"
+  },
+  domain: {
+    heading: "Los sitios web oficiales usan .gov",
+    text: `Un sitio web <strong>.gov</strong> pertenece a una organización oficial del Gobierno de Estados Unidos.`
+  },
+  https: {
+    heading: "Los sitios web seguros .gov usan HTTPS",
+    pretext: `Un <strong>candado</strong>`,
+    posttext: `o <strong>https://</strong> significa que usted se conectó de forma segura a un sitio web .gov.  Comparta información sensible sólo en sitios web oficiales y seguros.`
+  }
+};
+
+export const Mil = Template.bind({});
+Mil.args = {
+  banner: {
+    id: "gov-banner-dot-mil",
+    text: "An official website of the United States government",
+    action: "Here’s how you know",
+    aria_label: "Official government website,"
+  },
+  domain: {
+    heading: "Official websites use .mil",
+    text: `A <strong>.mil</strong> website belongs to an official U.S. Department of Defense organization.`
+  },
+  https: {
+    heading: "Secure .mil websites use HTTPS",
+    pretext: `A <strong>lock</strong>`,
+    posttext: `or <strong>https://</strong> means you’ve safely connected to the .mil website. Share sensitive information only on official, secure websites.`
+  }
+};
+
+export const MilSpanish = Template.bind({});
+MilSpanish.args = {
+  banner: {
+    id: "gov-banner-dot-mil-lang-es",
+    text: "Un sitio oficial del Gobierno de Estados Unidos",
+    action: "Un sitio oficial del Gobierno de Estados Unidos,",
+    aria_label: "Los sitios web oficiales usan .mil"
+  },
+  domain: {
+    heading: "Los sitios web oficiales usan .mil",
+    text: `Un sitio web <strong>.mil</strong> pertenece a una organización oficial del Departamento de Defensa de EE. UU.`
+  },
+  https: {
+    heading: "Los sitios web seguros .mil usan HTTPS",
+    pretext: `Un <strong>candado</strong>`,
+    posttext: `o <strong>https://</strong> significa que usted se conectó de forma segura a un sitio web .mil.  Comparta información sensible sólo en sitios web oficiales y seguros.`
+  }
+};
