@@ -58,7 +58,7 @@
     "watch": "NODE_ENV=development nswatch",
     "prettier:scss": "npx prettier --write ./src/stylesheets/**/*.scss",
     "prettier:templates": "npx prettier --write './build/components/render/*.html'",
-    "storybook": "start-storybook -p 6006 -s ./src",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "watch": {

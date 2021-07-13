@@ -1,7 +1,15 @@
 import "../../stylesheets/uswds.scss"
+import flagIcon from "../../img/us_flag_small.png";
+import dotGovIcon from "../../img/icon-dot-gov.svg";
+import httpsIcon from "../../img/icon-https.svg";
 import component from "./templates/banner.twig"
 
 const defaults = {
+  images: {
+    flagIcon,
+    dotGovIcon,
+    httpsIcon
+  },
   banner: {
     id: "gov-banner-default",
     text: "An official website of the United States government",
@@ -38,6 +46,7 @@ Default.args = defaults;
 
 export const DefaultSpanish = Template.bind({});
 DefaultSpanish.args = {
+  ...defaults,
   banner: {
     id: "gov-banner-default-lang-es",
     text: "Un sitio oficial del Gobierno de Estados Unidos",
@@ -57,6 +66,7 @@ DefaultSpanish.args = {
 
 export const Mil = Template.bind({});
 Mil.args = {
+  ...defaults,
   banner: {
     id: "gov-banner-dot-mil",
     text: "An official website of the United States government",
@@ -76,6 +86,7 @@ Mil.args = {
 
 export const MilSpanish = Template.bind({});
 MilSpanish.args = {
+  ...defaults,
   banner: {
     id: "gov-banner-dot-mil-lang-es",
     text: "Un sitio oficial del Gobierno de Estados Unidos",
