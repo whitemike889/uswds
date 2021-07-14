@@ -35,11 +35,20 @@ export default {
       text: { control: "text" },
       action: { control: "text" },
       aria_label: { control: "text" }
+    },
+    domain: {
+      header: { control: "text" },
+      text: { control: "text" }
+    },
+    https: {
+      heading: { control: "text" },
+      pretext: { control: "text" },
+      posttext: { control: "text" }
     }
   }
 }
 
-const Template = (...args) => component(...args);
+const Template = (banner, domain, https, ...args) => component(banner, domain, https, ...args);
 
 export const Default = Template.bind({});
 Default.args = defaults;
