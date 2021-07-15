@@ -5,54 +5,6 @@ import component from "./templates/identifier.twig"
 export default {
   title: "Components/Identifier",
   args: data.default.en
-  // argTypes: {
-  //   domain: "",
-  //   masthead: {
-  //     aria_label: "",
-  //     description: "",
-  //     content: "",
-  //     parent: {
-  //       name: "",
-  //       shortname: "",
-  //       logo: "",
-  //     },
-  //     agency: {
-  //       name: "",
-  //       shortname: "",
-  //       url: "",
-  //       logo: ""
-  //     },
-  //     taxpayer_disclaimer: {
-  //       content: "",
-  //       display: ""
-  //     },
-  //   },
-  //   required_links: {
-  //     aria_label: "",
-  //     links: [
-  //       {
-  //         label: "",
-  //         url: "",
-  //         include_shortname: ""
-  //       },
-  //       { label: "" },
-  //       { label: "" },
-  //       { label: "" },
-  //       { label: "" },
-  //       { label: "" },
-  //       { label: "" }
-  //     ]
-  //   },
-  //   usagov: {
-  //     aria_label: "",
-  //     description: "",
-  //     link: {
-  //       label: "",
-  //       url: ""
-  //     },
-  //     display: ""
-  //   }
-  // }
 }
 
 const Template = (...args) => component(...args);
