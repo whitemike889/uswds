@@ -1,7 +1,7 @@
 import "../../stylesheets/uswds.scss"
-import flagIcon from "../../img/us_flag_small.png";
-import dotGovIcon from "../../img/icon-dot-gov.svg";
-import httpsIcon from "../../img/icon-https.svg";
+import flagIcon from "../../img/us_flag_small.png"
+import dotGovIcon from "../../img/icon-dot-gov.svg"
+import httpsIcon from "../../img/icon-https.svg"
 import component from "./templates/banner.twig"
 
 const defaults = {
