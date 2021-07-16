@@ -10,7 +10,7 @@ module.exports = ({ config, mode }) => {
   // Tell Storybook where your components live
   config.resolve.alias["components"] = path.resolve(
     __dirname,
-    "src/components"
+    "src"
   );
 
   // Add scss support
