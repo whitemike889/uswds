@@ -9,6 +9,8 @@ export default {
 
 const Template = (...args) => component(...args);
 export const Default = Template.bind({});
+// Have to define here so data gets used on import
+Default.args = data.default.en
 
 export const DefaultSpanish = Template.bind({});
 DefaultSpanish.args = data.default.es

@@ -45,7 +45,8 @@ export default {
       pretext: { control: "text" },
       posttext: { control: "text" }
     }
-  }
+  },
+  args: defaults
 }
 
 const Template = (banner, domain, https, ...args) => component(banner, domain, https, ...args);
