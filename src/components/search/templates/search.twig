@@ -1,0 +1,18 @@
+<section aria-label="{{ aria_label }}">
+  <form class="usa-search {{ modifier }} {% if form.search_js %}js-search-form{% endif %}" role="search">
+    <label class="usa-sr-only" for="{{ form.input_id }}">
+      {{ form.label_text }}
+    </label>
+    <input class="usa-input" id="{{ form.input_id }}" type="search" name="search">
+    <button class="usa-button" type="submit">
+      {% if modifier != 'usa-search--small' %}
+        <span class="usa-search__submit-text">{{ form.button_text }}</span>
+      {% endif %}
+      <img
+          src="{{ icon }}"
+          class="usa-search__submit-icon"
+          alt="{{ form.button_text }}"
+      >
+    </button>
+  </form>
+</section>

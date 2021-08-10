@@ -1,0 +1,20 @@
+{
+  "en": {
+    "aria_label": "Default search component",
+    "form": {
+      "search_js": false,
+      "label_text": "Search",
+      "button_text": "Search",
+      "input_id": "search-field"
+    }
+  },
+  "es": {
+    "aria_label": "Default (Spanish) search component",
+    "form": {
+      "search_js": false,
+      "label_text": "Buscar",
+      "button_text": "Buscar",
+      "input_id": "search-field-es"
+    }
+  }
+}
