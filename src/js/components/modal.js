@@ -83,11 +83,11 @@ function toggleModal(event) {
     // If it doesn't have an ID, make one
     // Store id as data attribute on modal
     if (clickedElement.hasAttribute(OPENER_ATTRIBUTE)) {
-      if (this.getAttribute("id") === null) {
+      if (clickedElement.getAttribute("id") === null) {
         originalOpener = `modal-${Math.floor(Math.random() * 900000) + 100000}`;
-        this.setAttribute("id", originalOpener);
+        clickedElement.setAttribute("id", originalOpener);
       } else {
-        originalOpener = this.getAttribute("id");
+        originalOpener = clickedElement.getAttribute("id");
       }
       targetModal.setAttribute("data-opener", originalOpener);
     }
@@ -230,7 +230,15 @@ const setUpAttributes = (baseComponent) => {
 modal = behavior(
   {
     [CLICK]: {
-      [OPENERS]: toggleModal,
+      [OPENERS](event) {
+        console.log(event.target.hasAttribute(OPENER_ATTRIBUTE));
+
+        if (event.target.hasAttribute(OPENER_ATTRIBUTE)) {
+          toggleModal(event);
+        }
+
+
+      },
       [CLOSERS]: toggleModal,
     },
   },
