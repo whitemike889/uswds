@@ -230,16 +230,18 @@ const setUpAttributes = (baseComponent) => {
 modal = behavior(
   {
     [CLICK]: {
+      // [OPENERS]: toggleModal,
+      // [CLOSERS]: toggleModal,
       [OPENERS](event) {
-        console.log(event.target.hasAttribute(OPENER_ATTRIBUTE));
-
         if (event.target.hasAttribute(OPENER_ATTRIBUTE)) {
           toggleModal(event);
         }
-
-
       },
-      [CLOSERS]: toggleModal,
+      [CLOSERS](event) {
+        if (event.target.matches(`.${CLOSE_BUTTON}, .${OVERLAY_CLASSNAME}:not([${FORCE_ACTION_ATTRIBUTE}]`)) {
+          toggleModal(event);
+        }
+      },
     },
   },
   {
